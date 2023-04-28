@@ -1,0 +1,36 @@
+# titulo de la ventana 
+# titulo de la ventana 
+from tkinter import *
+ventana_principal = Tk ()
+ventana_principal.title("bandera de francia")
+
+
+ventana_principal.geometry("900x400")
+ventana_principal.resizable(False, False)
+
+
+#------------------------------
+# frame azul
+#-------------------------------
+# ------------------------------
+# frame amarillo 
+#-------------------------------
+frame_azul= Frame(ventana_principal)
+frame_azul.config(bg="navy",width=300, height=400)
+frame_azul.place(x=0, y=0)
+
+#------------------------------
+# frame amarillo 
+#-------------------------------
+frame_blanco =Frame(ventana_principal)
+frame_blanco.config(bg="white",width=300, height=400)
+frame_blanco.place(x=300, y=0)
+
+
+frame_rojo =Frame(ventana_principal)
+frame_blanco.config(bg="red3",width=300, height=400)
+frame_blanco.place(x=600, y=0)
+
+#run
+
+ventana_principal.mainloop()
