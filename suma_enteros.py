@@ -2,14 +2,37 @@
 # Desktop app No. 1
 #------------------------
 
-
 # se importa la libreria tkinter con todas sus funciones
 from tkinter import *
+from tkinter import messagebox
 
 #-----------------------
 # funciones de la app
 #-----------------------
+ # sumar 
+def calcular():
+    messagebox.showinfo("Minicalculadora 1.0, " "Las opraciones han sido realizadas")
+    s = int( x.get()) + int(y.get())
+    r  = int( x.get()) - int(y.get())
+    m = int( x.get()) * int(y.get())
+    d = int( x.get()) / int(y.get())
+    de = int( x.get()) // int(y.get())
+    mod = int( x.get()) % int(y.get())
+    p = int( x.get()) ** int(y.get())
+    t_resultados.insert(INSERT, f"{int(x.get())} + {int(y.get())} = {(s)}")
+    
+# borrar 
+def borrar():
+   messagebox.showinfo("Minicalculadora 1.0" , " los datos seran borrados")
+   x.set("")
+   y.set("")
+   t_resultados.delete("1.0" , "end")
 
+# salir 
+def salir():
+   messagebox.showinfo("Minicalculadora 1.0" , " la app se va a cerrar " )
+   ventana_principal.destroy
+ 
 #-----------------------------
 # ventana principal de la app
 #------------------------------
@@ -61,7 +84,6 @@ lb_y= Label(frame_entrada, text = "Y" )
 lb_y.config(bg="white", fg="blue", font=("Helvetica", 18))
 lb_y.place(x=290,y=60)
 
-
 #---------------------------------
 # frame operaciones
 #---------------------------------
@@ -80,7 +102,6 @@ bt_borrar.place(x=190, y=35, width=100, height=30)
 # boton para salir 
 bt_salir = Button(frame_operaciones,text="Salir", command=salir)
 bt_salir.place(x=335, y=35, width=100, height=30)
-
 
 #---------------------------------
 # frame resultados 
