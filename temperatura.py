@@ -90,7 +90,8 @@ entry_c.focus_set()
 entry_c.place(x=300,y=60)
 
 
-combo = ttk.Combobox(state="reandonly",values=["fahrenheit","kelvin,"fahr","kel"])
+combo = ttk.Combobox(state="reandonly",values=["fahrenheit","kelvin"])
+
 combo.place(x=240,y=110)
 
 #--------------------------------
